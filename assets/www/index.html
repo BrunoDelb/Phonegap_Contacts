@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+		<link rel="stylesheet" href="css/jquery.mobile-1.0.1.min.css" />
+        <title>Phone Gap Contacts</title>
+    </head>
+    <body>
+
+		<div data-role="page" id="pageListeContacts">
+			<div data-role="header" data-position="fixed">
+				<h1>Contacts</h1>
+				<a href="#contact" data-icon="plus" class="ui-btn-right">Ajoute</a>
+			</div>
+			<div data-role="content">
+				<h2>Liste des contacts</h2>
+				<ul id="listeContacts" data-role="listview" data-filter="true" data-inset="true"></ul>
+			</div>
+		</div>
+
+		<div data-role="page" id="pageDetailsContact">
+			<div data-role="header" data-position="fixed">
+				<a href="#" id="btnEnregistre" data-icon="check">Enregistre</a>
+				<h1>Contact</h1>		
+				<a href="#" id="btnSupprime" data-icon="delete">Supprime</a>
+			</div>
+			<div data-role="content">
+				<form id="formContact" action="#" method="post">
+					<div data-role="fieldcontain" class="ui-hide-label">
+						<label for="prenom">Prénom:</label>
+						<input type="text" name="prenom" id="prenom" />
+					</div>
+					<div data-role="fieldcontain" class="ui-hide-label">
+						<label for="nom">Nom:</label>
+						<input type="text" name="nom" id="nom" />
+					</div>
+					<div data-role="fieldcontain" class="ui-hide-label">
+						<label for="telephone">Téléphone:</label>
+						<input type="tel" name="telephone" id="telephone" />
+					</div>
+				</form>
+			</div>
+		</div>
+
+        <script type="text/javascript" src="cordova-2.7.0.js"></script>
+		<script src="js/jquery-1.7.1.min.js"></script>
+		<script src="js/jquery.mobile-1.0.1.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="app.js"></script>
+    </body>
+</html>
